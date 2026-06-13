@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "I like this world(without Ad)",
-  "version": "3.1",
+  "version": "3.2",
   "description": "広告・トラッカードメインをブロックし、拡張モードでは広告ドメインを推定ブロックする拡張機能",
   "permissions": [
     "declarativeNetRequest",

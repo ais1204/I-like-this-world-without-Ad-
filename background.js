@@ -57,7 +57,12 @@ const WHITELIST = [
   "twitter.com","twimg.com","x.com","facebook.com","fbcdn.net","instagram.com",
   "yahoo.co.jp","yimg.jp","line.me","linecorp.com","rakuten.co.jp",
   "paypal.com","stripe.com","recaptcha.net","gstatic.cn",
-  "typekit.net","fonts.net","cookielaw.org","onetrust.com"
+  "typekit.net","fonts.net","cookielaw.org","onetrust.com",
+  "bing.com","bing.net","msn.com","duckduckgo.com",
+  "amazon.com","amazon.co.jp","yahoo.com","github.io",
+  "wordpress.com","wp.com","blogspot.com","note.com",
+  "linkedin.com","ebay.com","weather.com","shopify.com",
+  "netlify.app","vercel.app","pages.dev"
 ];
 
 // ---- rules.json と同じ確定ブロック対象（JS側でも判定・カウント用）----
