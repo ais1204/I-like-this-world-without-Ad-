@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>I like this world(without Ad)</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <span class="logo">🛡️</span>
+    <div>
+      <div class="title">I like this world<br>(without Ad)</div>
+      <div class="subtitle">このページの状況</div>
+    </div>
+  </div>
+
+  <div class="site-toggle">
+    <div class="site-toggle-info">
+      <div class="site-host" id="siteHost">-</div>
+      <div class="site-toggle-label">このサイトの広告をブロックする</div>
+    <div class="site-toggle-note">※切り替えるとページが再読み込みされます</div>
+    </div>
+    <label class="switch">
+      <input type="checkbox" id="siteEnabledToggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="section mode-section">
+    <div class="section-title">🎛️ 動作モード</div>
+    <div class="mode-options">
+      <label class="mode-option">
+        <input type="radio" name="mode" value="basic">
+        <div class="mode-text">
+          <div class="mode-name">基本モード</div>
+          <div class="mode-desc">確定リストのドメインのみブロック（推奨・安全）</div>
+        </div>
+      </label>
+      <label class="mode-option">
+        <input type="radio" name="mode" value="extended">
+        <div class="mode-text">
+          <div class="mode-name">拡張モード</div>
+          <div class="mode-desc">確定リスト＋スコア判定で広告と強く推定されるドメインをブロック（誤検知を抑えた慎重判定）</div>
+        </div>
+      </label>
+      <label class="mode-option">
+        <input type="radio" name="mode" value="extended_plus">
+        <div class="mode-text">
+          <div class="mode-name">拡張+モード</div>
+          <div class="mode-desc">判定を緩めて広く推定ブロック（多少の誤爆を許容し検知漏れを抑える積極判定）</div>
+        </div>
+      </label>
+      <label class="mode-option">
+        <input type="radio" name="mode" value="off">
+        <div class="mode-text">
+          <div class="mode-name">オフ</div>
+          <div class="mode-desc">広告ブロック・検知をすべて無効化</div>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-box">
+      <div class="stat-number" id="blockedCount">0</div>
+      <div class="stat-label">ブロック済み<br>リクエスト</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number" id="suspiciousCount">0</div>
+      <div class="stat-label" id="suspiciousLabel">怪しい通信<br>(未ブロック)</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">⚠️ 検知された「広告っぽい」ドメイン</div>
+    <div class="section-desc" id="suspiciousDesc">
+      確定リストには無いが、名前のパターンから広告/トラッキングの可能性があるドメインです。誤動作防止のため自動ではブロックしていません。
+    </div>
+    <ul id="suspiciousList" class="domain-list">
+      <li class="empty">検知なし</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <a href="https://github.com" target="_blank" id="reportLink">気になるドメインを報告 / リストを編集</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
