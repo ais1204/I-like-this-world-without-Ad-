@@ -5,7 +5,6 @@
   "description": "広告・トラッカードメインをブロックし、拡張モードでは広告ドメインを推定ブロックする拡張機能",
   "permissions": [
     "declarativeNetRequest",
-    "declarativeNetRequestFeedback",
     "webRequest",
     "webNavigation",
     "tabs",
